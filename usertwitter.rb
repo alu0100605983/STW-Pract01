@@ -7,9 +7,9 @@ user = Hash.new
 list 	= Twitter.friend_ids(name)
 
 list.ids.each do |fid|
-	f = Twitter.user(fid)
+	seguidores = Twitter.user(fid)
 	if (f.protected.to_s != "true")
-		user[f.screen_name.to_s] = f.followers_count
+		user[f.screen_name.to_s] = seguidores.followers_count
 	end
 end
 
