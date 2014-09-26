@@ -1,5 +1,5 @@
 require 'twitter'
-require './configure2'
+require './configure'
 
 name	= ARGV[0] || 'mery_reds'
 num 	= Integer(ARGV[1]) || 1 
